@@ -23,4 +23,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'  # GitHub token for authentication
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JCC_PETITION }}'  # Firebase service account key
           projectId: jcc-petition  # Your Firebase project ID
-          # channelId: live  # Remove or comment out this line if not deploying to a specific channel
+          # Remove the channelId line and use 'firebase deploy' instead of 'hosting:channel:deploy'
