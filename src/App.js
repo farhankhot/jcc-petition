@@ -27,7 +27,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <VStack spacing={6} align="stretch" m={5}>
       <Box bg="blue.100" p={5} shadow="md" borderRadius="md">
-          <Text align="center" fontSize="2xl" fontWeight="bold">Petition for Jacuzzi Temperature Increase</Text>
+          <Text align="center" fontWeight="bold">Petition for Jacuzzi Temperature Increase</Text>
           <Text mt={2} fontSize="md">
             We're gathering signatures to request an increase in the temperature of our gym/community center's jacuzzi. A slight increase 
             would greatly enhance the wellness experience for many users. Your support is crucial for bringing this change.
