@@ -3,7 +3,7 @@ name: Build and Deploy to Firebase Hosting
 'on':
   push:
     branches:
-      - main  # Trigger the workflow when there's a push to the main branch
+      - master  # Trigger the workflow when there's a push to the main branch
 
 jobs:
   build_and_deploy:
