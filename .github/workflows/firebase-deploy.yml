@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3  # Check out the code in the repository
 
       - name: Install Dependencies
-        run: npm install  # Install project dependencies
+        run: npm ci  # Install project dependencies efficiently
 
       - name: Build
         run: npm run build  # Build the project
@@ -23,4 +23,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'  # GitHub token for authentication
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JCC_PETITION }}'  # Firebase service account key
           projectId: jcc-petition  # Your Firebase project ID
-          # Remove the channelId line and use 'firebase deploy' instead of 'hosting:channel:deploy'
+          # Notice that channelId is not specified for production deployment
