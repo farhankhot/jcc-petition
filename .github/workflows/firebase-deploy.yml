@@ -1,0 +1,25 @@
+name: Build and Deploy to Firebase Hosting
+
+'on':
+  push:
+    branches:
+      - main  # Trigger the workflow when there's a push to the main branch
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3  # Check out the code in the repository
+
+      - name: Install Dependencies
+        run: npm install  # Install project dependencies
+
+      - name: Build
+        run: npm run build  # Build the project
+
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'  # GitHub token for authentication
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JCC_PETITION }}'  # Firebase service account key
+          projectId: jcc-petition  # Your Firebase project ID
